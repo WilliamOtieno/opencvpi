@@ -2,3 +2,4 @@
 pienv 
 requirements.txt 
 cv2
+__pycache__/
