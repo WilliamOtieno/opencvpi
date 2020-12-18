@@ -1,3 +1,10 @@
 ObjectDetectionModule.pyc
 .idea
+<<<<<<< HEAD
 pienv
+=======
+pienv 
+requirements.txt 
+cv2
+__pycache__/
+>>>>>>> 0dff826ef3db32b3642e162da494371b75080a2d
