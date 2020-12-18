@@ -1,8 +1,8 @@
 #!/bin/bash
-
 echo "Updating and upgrading your Pi..."
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo rpi-update -y
-sudo echo "CONF_SWAPSIZE=2048" > /etc/dphys-swapfile
+sudo echo "CONF_SWAPSIZE=2048" >> /etc/dphys-swapfile
+sudo systemctl restart dphys-swapfile
 echo "Installing all required dependencies..."
 sudo apt-get install build-essential cmake pkg-config -y
 sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev -y
@@ -17,6 +17,8 @@ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.4.
 unzip opencv.zip
 unzip opencv_contrib.zip
 sudo pip3 install numpy
+
+cd ~
 cd ~/opencv-4.4.0
 mkdir build
 cd build
@@ -28,4 +30,4 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
   -D BUILD_EXAMPLES=ON ..
 make -j4
 sudo make install && sudo ldconfig
-sudo reboot
+echo "Build complete."
