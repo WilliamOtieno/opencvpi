@@ -1,7 +1,7 @@
 import cv2
+from MainModule import objectInfo
 
 thresh = 0.45  # Threshold to detect object
-
 
 classNames = []
 classFile = 'coco.names'
@@ -41,3 +41,7 @@ def getObjects(img, draw=True, objects=[]):
     return img, objectInfo
 
 
+def saveData():
+    with open('outputs.txt', 'w') as f:
+        f.writelines(objectInfo)
+        f.close()
