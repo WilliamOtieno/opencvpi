@@ -7,6 +7,6 @@ while True:
     success, img = cap.read()
     result, objectInfo = getObjects(img, True)
     print(objectInfo)
-
+    saveData()
     cv2.imshow("Output", img)
     cv2.waitKey(1)
