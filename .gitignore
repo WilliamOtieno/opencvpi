@@ -6,3 +6,4 @@ pienv
 cv2
 __pycache__/
 venv
+outputs.txt

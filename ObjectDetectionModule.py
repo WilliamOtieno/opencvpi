@@ -1,5 +1,4 @@
 import cv2
-from MainModule import objectInfo
 
 thresh = 0.45  # Threshold to detect object
 
@@ -40,8 +39,3 @@ def getObjects(img, draw=True, objects=[]):
                                 cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 2)
     return img, objectInfo
 
-
-def saveData():
-    with open('outputs.txt', 'w') as f:
-        f.writelines(objectInfo)
-        f.close()
