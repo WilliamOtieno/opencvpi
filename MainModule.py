@@ -1,6 +1,10 @@
 from ObjectDetectionModule import *
 
 cap = cv2.VideoCapture(0)  # default webcam on your system
+
+### cap = cv2.VideoCapture('video.mkv')
+
+
 cap.set(3, 640)  # resolution width
 cap.set(4, 480)  # resolution height
 while True:
