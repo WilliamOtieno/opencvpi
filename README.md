@@ -17,7 +17,8 @@ Create a virtual environment (optional) then run the following code in your comm
 
 ### Usage
 
-Run the main file `MainModule.py` to launch the script and test if it works.
+Run the main file `main.py` to launch the script and test if it works i.e. `pip3 install -r requirements.txt && python3 main.py`
+
 In the same `python` file, use `line 3` if intended use is with the webcam; otherwise, comment out `line 3` and uncomment `line 5` if intended use is with a video file.
 
-If use is with the video file, make sure to place the video file inside the project directory then write the video file name inside the python script in `line 5` of `MainModule.py`
+If use is with the video file, make sure to place the video file inside the project directory then write the video file name inside the python script in `line 5` of `main.py`
